@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Product } from '../shared/entities/product';
 
 @Component({
@@ -7,6 +7,11 @@ import { Product } from '../shared/entities/product';
   templateUrl: './product-card.component.html',
   styleUrls: ['./product-card.component.css']
 })
-export class ProductCardComponent {
-  @Input() product! : Product;
+export class ProductCardComponent{
+  @Input() productId : number = 0;
+  @Input() productName : string = '';
+  @Input() productPrice : number = 0 ;
+  @Input() productImageLocation : string = '';
+
+  constructor() {}
 }

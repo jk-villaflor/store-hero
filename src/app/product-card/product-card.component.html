@@ -1,3 +1,12 @@
-<div class="border border-cyan-100">
-    {{ product }}
+<div class="border border-slate-300 rounded-lg">
+    <img
+    src="https://picsum.photos/id/{{ this.productId }}/200/"
+    class="rounded-t-lg"
+    alt="..." />
+   <div class="p-6">
+    <h5 class="text uppercase font-bold font-poppins">
+        <a href="/product/{{this.productId}}" class="hover:underline hover:text-rose-400">{{this.productName }}</a>
+    </h5>
+    <p class="font-poppins">{{ this.productPrice }}</p>
+   </div> 
 </div>
