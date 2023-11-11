@@ -7,7 +7,8 @@ module.exports = {
     extend: {
       fontFamily: {
         sourcesans3: ['Source Sans 3'],
-        rubik: ['Rubik'],        
+        rubik: ['Rubik'], 
+        poppins: ['Poppins']       
       }
     },
   },
