@@ -1,5 +1,13 @@
 <div id="productsList" class="flex gap-4">
-    <div *ngFor="let product of productList">
-        <product-card [product]="product"></product-card>
+    <div *ngFor="let product of sampleProduct">
+        <!-- <div>{{ product.productId }}</div> -->
+        <product-card 
+            [productId]="product.productId"
+            [productName]="product.productName"
+            [productPrice]="product.productPrice">
+        </product-card>
     </div>
+    <!-- {{ sampleProduct }} -->
+    <div *ngIf="error"> Error fetching data: {{ error }}</div>
+    <!-- {{ productList[0] | json}} -->
 </div>
