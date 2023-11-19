@@ -6,11 +6,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ProductsService {
-  private apiUrl = 'http://localhost:8080/api/v1/products';
+  private apiUrl = 'https://dummyjson.com/products';
 
   constructor(private http: HttpClient) { }
 
-  getProducts(): Observable<any[]> {
-    return this.http.get<any[]>(this.apiUrl);
+  getProducts(): Observable<Object> {
+    return this.http.get<Object>(this.apiUrl);
   }
 }
