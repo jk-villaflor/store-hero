@@ -10,8 +10,8 @@ import { Product } from '../shared/entities/product';
 export class ProductCardComponent{
   @Input() productId! : number;
   @Input({required: true}) productName! : string;
-  @Input() productPrice : number = 0 ;
-  @Input() productImageLocation : string = '';
+  @Input() productPrice! : number;
+  @Input() productImageLocation! : string;
 
   constructor() {}
 }

@@ -1,9 +1,11 @@
-<div id="productsList" class="flex gap-4">
+<div id="productsList" class="flex flex-wrap gap-4">
     <div *ngFor="let product of productList">
         <product-card 
-            [productId]="product['product_id']"
-            [productName]="product['product_name']"
-            [productPrice]="product['product_price']">
+            [productId]="product['id']"
+            [productName]="product['title']"
+            [productPrice]="product['price']"
+            [productImageLocation]="product['thumbnail']"
+            >
         </product-card>
     </div>
     <div *ngIf="error"> Error fetching data: {{ error }}</div>
