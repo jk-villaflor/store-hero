@@ -8,8 +8,8 @@ import { Product } from '../shared/entities/product';
   styleUrls: ['./product-card.component.css']
 })
 export class ProductCardComponent{
-  @Input() productId : number = 0;
-  @Input() productName : string = '';
+  @Input() productId! : number;
+  @Input({required: true}) productName! : string;
   @Input() productPrice : number = 0 ;
   @Input() productImageLocation : string = '';
 
